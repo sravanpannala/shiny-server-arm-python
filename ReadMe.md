@@ -36,6 +36,13 @@ http://localhost:3838/
 http://localhost:3838/basic-app
 
 ```
+# Troubleshooting
+Troubleshooting
+If you run into any trouble along the way, it might be due to permission problems. You can try running the following command: 
+```
+chmod -R 777 ~/shiny-server/.
+
+```
 
 # Build Instructions
 This image can be build on an ARM machine by running the following code in this directory:
