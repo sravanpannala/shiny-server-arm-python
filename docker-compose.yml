@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  shiny-server:
+    image: sradjoker/shiny-server-arm-python:latest
+    container_name: shiny-server
+    ports:
+      - 3838:3838
+    volumes:
+       - ~/shiny-server/apps:/srv/shiny-server/
+       - ~/shiny-server/logs:/var/log/shiny-server/
+       - ~/shiny-server/conf:/etc/shiny-server/
+    restart: always
+
