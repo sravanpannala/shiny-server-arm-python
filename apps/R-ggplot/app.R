@@ -1,11 +1,13 @@
 library(shiny)
 library(ggplot2)
+
 ui <- fluidPage(
   tags$h3("Scatter plot generator"),
   selectInput(inputId = "x", label = "X Axis", choices = names(mtcars), selected = "mpg"),
   selectInput(inputId = "y", label = "Y Axis", choices = names(mtcars), selected = "hp"),
   plotOutput(outputId = "scatterPlot")
 )
+
 server <- function(input, output, session) {
   data <- reactive({mtcars})
   
