@@ -32,16 +32,24 @@ docker-compose up -d
 http://localhost:3838/
 ```
 unless you change the port in the [docker-compose.yml](./docker-compose.yml)
-- Two example python apps called [`dashboard`](./apps/dashboard/) and [`multi-page`](./apps/multi-page/) are provided and are running at:
-```
-http://localhost:3838/dashboard
-http://localhost:3838/multi-page
-```
+
+# Examples
+Four example apps are available, 3 in python and 1 in R:
+- [`Py-basic-app`](./apps/Py-basic-app/): Running at http://localhost:3838/Py-basic-app
+- [`Py-dashboard`](./apps/Py-dashboard/): Running at http://localhost:3838/Py-dashboard
+- [`Py-multi-page`](./apps/Py-multi-page/): Running at http://localhost:3838/Py-multi-page
+- [`R-ggplot`](./apps/R-ggplot/): Running at http://localhost:3838/R-ggplot
+
 These apps should run, if everything was installed correctly. If the apps don't run for any reason, there is an issue in the installation.
 
 # Troubleshooting
-Troubleshooting
-If you run into any trouble along the way, it might be due to permission problems. You can try running the following command: 
+If you run into any trouble along the way, it might be due to permission problems. 
+First, try making the `init.sh` script executable:
+```
+chmod +x ~/shiny-server/conf/init.sh
+```
+
+If the issue is not solved, you can also try running the following command:
 ```
 chmod -R 777 ~/shiny-server/
 
