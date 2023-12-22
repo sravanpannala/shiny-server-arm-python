@@ -14,8 +14,10 @@ RUN apt clean -y
 RUN apt autoremove -y
 # install python packages
 RUN pip3.11 install --no-cache-dir --upgrade pip
-RUN pip3.11 install --no-cache-dir shiny plotnine seaborn scikit-learn pyarrow
+RUN pip3.11 install --no-cache-dir shiny plotnine seaborn plotly pyarrow scikit-learn
 # install R packages
 RUN apt install -y libv8-dev libharfbuzz-dev libfribidi-dev libmagick++-dev
-RUN R -e "install.packages(c('tidyverse','gt','gtExtras','ggimage','ggtext','scales'), repos='https://repo.miserver.it.umich.edu/cran/')"
+RUN R -e "install.packages(c('tidyverse','gt','gtExtras','ggimage','ggtext','scales'), Ncpus = 4, repos='https://repo.miserver.it.umich.edu/cran/')"
 RUN mkdir -p /var/data/
+# install additional packages
+RUN pip3.11 install --no-cache-dir nba-api pbpstats
