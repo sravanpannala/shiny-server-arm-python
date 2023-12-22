@@ -9,5 +9,7 @@ services:
        - ~/shiny-server/apps:/srv/shiny-server/
        - ~/shiny-server/logs:/var/log/shiny-server/
        - ~/shiny-server/conf:/etc/shiny-server/
+     # Optional: Mount additional data directory
+     #  - ~/data/:/var/data/
     restart: always
 

@@ -18,3 +18,4 @@ RUN pip3.11 install --no-cache-dir shiny plotnine seaborn scikit-learn pyarrow
 # install R packages
 RUN apt install -y libv8-dev libharfbuzz-dev libfribidi-dev libmagick++-dev
 RUN R -e "install.packages(c('tidyverse','gt','gtExtras','ggimage','ggtext','scales'), repos='https://repo.miserver.it.umich.edu/cran/')"
+RUN mkdir -p /var/data/
