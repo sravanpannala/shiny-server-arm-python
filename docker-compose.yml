@@ -10,6 +10,6 @@ services:
        - ~/shiny-server/logs:/var/log/shiny-server/
        - ~/shiny-server/conf:/etc/shiny-server/
      # Optional: Mount additional data directory
-     #  - ~/data/:/var/data/
+       - ~/nbadata/:/var/data/
     restart: always
 
