@@ -31,16 +31,19 @@ docker-compose up -d
 ```
 http://localhost:3838/
 ```
-- An example python app called `basic-app` is provided and is running at 
+unless you change the port in the [docker-compose.yml](./docker-compose.yml)
+- Two example python apps called [`dashboard`](./apps/dashboard/) and [`multi-page`](./apps/multi-page/) are provided and are running at:
 ```
-http://localhost:3838/basic-app
+http://localhost:3838/dashboard
+http://localhost:3838/multi-page
+```
+These apps should run, if everything was installed correctly. If the apps don't run for any reason, there is an issue in the installation.
 
-```
 # Troubleshooting
 Troubleshooting
 If you run into any trouble along the way, it might be due to permission problems. You can try running the following command: 
 ```
-chmod -R 777 ~/shiny-server/.
+chmod -R 777 ~/shiny-server/
 
 ```
 
@@ -49,6 +52,8 @@ This image can be build on an ARM machine by running the following code in this 
 ```
 docker build -t shiny-server .
 ```
+`docker build` command uses the provided [Dockerfile](./Dockerfile) to build the image. 
+
 
 # Acknowledgements
 Further instructions and resources are available [shiny-server-arm-docker](https://github.com/hvalev/shiny-server-arm-docker) repo.
