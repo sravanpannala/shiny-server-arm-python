@@ -65,8 +65,9 @@ If you followed the steps so far, the apps should be accessible at these urls:
 
 You can add your own app by copying it over to the folder `shiny-server/apps`, 
 where it will be available under `http://localhost:3838/yourappfolder`. 
+You can add a configuration file for each app under `shiny-server/apps/yourappfolder/.shiny_app.conf`.
 
-## Troubleshooting
+### Troubleshooting
 If you run into any trouble along the way, it might be due to permission problems. 
 First, try making the `init.sh` script executable:
 ```
