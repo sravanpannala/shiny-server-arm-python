@@ -19,5 +19,6 @@ RUN pip3.11 install --no-cache-dir shiny plotnine seaborn plotly pyarrow scikit-
 RUN apt install -y libv8-dev libharfbuzz-dev libfribidi-dev libmagick++-dev
 RUN R -e "install.packages(c('tidyverse','gt','gtExtras','ggimage','ggtext','scales'), Ncpus = 4, repos='https://repo.miserver.it.umich.edu/cran/')"
 RUN mkdir -p /var/data/
-# install additional packages
-RUN pip3.11 install --no-cache-dir nba-api pbpstats
+# install additional packages (optional)
+#RUN pip3.11 install --no-cache-dir package1 package2 ..........
+#RUN R -e "install.packages(c('package1','package2',............), Ncpus = 4, repos='https://repo.miserver.it.umich.edu/cran/')"

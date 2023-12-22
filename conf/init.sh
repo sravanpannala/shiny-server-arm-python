@@ -9,6 +9,8 @@
 
 FILE=/etc/shiny-server/init_done
 if [ ! -f "$FILE" ]; then
+    #example for installing Pythong libraries
+    #pip3.11 install nba-api pbpstats
     #example for installing R libraries
     #R -e "install.packages(c('shinyjs','filelock'), repos='http://cran.rstudio.com/')"
     touch /etc/shiny-server/init_done
