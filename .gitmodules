@@ -1,0 +1,3 @@
+[submodule "/home/sramt/shiny-server/apps"]
+	path = /home/sramt/shiny-server/apps
+	url = git@github.com:sravanpannala/shinyNBA.git
