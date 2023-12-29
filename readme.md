@@ -81,7 +81,7 @@ chmod -R 777 ~/shiny-server/
 ### Configuring shiny-server
 Shiny servers' configuration file can be found under `shiny-server/conf/shiny-server.conf`. 
 The default settings should be sufficient, however you can also modify it according to your needs. 
-The [documentation of shiny-server](https://docs.rstudio.com/shiny-server/) 
+The [documentation of shiny-server](https://rstudio.github.io/shiny-server/os/latest/) 
 is always a good place to start, when you want to tune your installation.
 
 ## Slimmer Options:
